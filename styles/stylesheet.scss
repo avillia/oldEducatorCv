@@ -81,8 +81,6 @@ body {
 
 /* Style the back side */
 .skill-and-job-card-back {
-  background-color: #7C6EAB;
-  color: white;
   transform: rotateY(180deg);
 }
 
@@ -91,12 +89,12 @@ body {
   margin: 1%;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 800px) {
   .cards-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

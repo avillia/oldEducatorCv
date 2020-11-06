@@ -7,148 +7,190 @@
 </head>
 <body>
     <img src="pictures/me-avatar.png" alt="Моя фотография" class="my-avatar">
-    <div class="text-container">
+    <div class="main-container">
         <h1><b>Ілля Авдієнко</b></h1>
         <p>викладач інформатики для дітей</p>
     </div>
 
-    <div class="text-container">
+    <div class="main-container">
         <h2>Хто я?</h2>
         <p>Мене звати <b>Ілля</b>, мені 20 років і вже близько <b>2-х років</b> я викладаю інформаційні технології.</p>
         <p>В сферу моєї професійної діяльності входить як і <b>академічне викладання</b>, так і <b>геймфікація</b>
             освіти з <b>педагогікою в ігровій формі</b>.</p>
     </div>
 
-    <div class="text-container">
+    <div class="main-container">
         <h2>Що я викладаю?</h2>
     </div>
-    <div class="cards-container">
-        <div class="skill-and-job-card">
-            <div class="skill-and-job-card-inner">
-                <div class="skill-and-job-card-front">
-                    <img src="pictures/python_no_text.png" alt="Avatar" style="height: 100%; width: 100%">
+    <div id="skill-cards-container">
+        <div class="skill-card">
+            <div class="skill-card-inner">
+                <div class="skill-card-front">
+                    <img src="pictures/python_no_text.png" alt="Avatar" class="skill-card-picture">
                 </div>
-                <div class="skill-and-job-card-back skill-card-python">
+                <div class="skill-card-back skill-card-python">
                     <h3>Python</h3>
                     <p>Найкраща мова програмування для початківців: проста і водночас потужна.</p>
                 </div>
             </div>
         </div>
-        <div class="skill-and-job-card">
-            <div class="skill-and-job-card-inner">
-                <div class="skill-and-job-card-front">
-                    <img src="pictures/lego_wedo.jpg" alt="Avatar" style="height: 100%; width: 100%">
+        <div class="skill-card">
+            <div class="skill-card-inner">
+                <div class="skill-card-front">
+                    <img src="pictures/lego_wedo.jpg" alt="Avatar" class="skill-card-picture">
                 </div>
-                <div class="skill-and-job-card-back skill-card-lego">
+                <div class="skill-card-back skill-card-lego">
                     <h3>LEGO-робототехніка</h3>
                     <p>Інженерне мислення й творчість з набором LEGO WeDo!</p>
                 </div>
             </div>
         </div>
-        <div class="skill-and-job-card">
-            <div class="skill-and-job-card-inner">
-                <div class="skill-and-job-card-front">
-                    <img src="pictures/how-to-front-end.jpg" alt="Avatar" style="height: 100%; width: 100%">
+        <div class="skill-card">
+            <div class="skill-card-inner">
+                <div class="skill-card-front">
+                    <img src="pictures/how-to-front-end.jpg" alt="Avatar" class="skill-card-picture">
                 </div>
-                <div class="skill-and-job-card-back skill-card-web">
+                <div class="skill-card-back skill-card-web">
                     <h3>Web-розробка</h3>
                     <p>Звичайно ж, адже ви бачите це резюме!</p>
                     <p>HTML5, CSS 3, та трошки JS.</p>
                 </div>
             </div>
         </div>
-        <div class="skill-and-job-card">
-            <div class="skill-and-job-card-inner">
-                <div class="skill-and-job-card-front">
-                    <img src="pictures/java.png" alt="Avatar" style="height: 100%; width: 100%">
+        <div class="skill-card">
+            <div class="skill-card-inner">
+                <div class="skill-card-front">
+                    <img src="pictures/java.png" alt="Avatar" class="skill-card-picture">
                 </div>
-                <div class="skill-and-job-card-back skill-card-java">
+                <div class="skill-card-back skill-card-java">
                     <h3>Java</h3>
                     <p>Початковий курс та вивчення основ найпопулярнішої мови сьогодення!</p>
                 </div>
             </div>
         </div>
-        <div class="skill-and-job-card">
-            <div class="skill-and-job-card-inner">
-                <div class="skill-and-job-card-front">
-                    <img src="pictures/Steve_Minecraft.jpg" alt="Avatar" style="height: 100%; width: 100%">
+        <div class="skill-card">
+            <div class="skill-card-inner">
+                <div class="skill-card-front">
+                    <img src="pictures/Steve_Minecraft.jpg" alt="Avatar" class="skill-card-picture">
                 </div>
-                <div class="skill-and-job-card-back skill-card-minecraft">
+                <div class="skill-card-back skill-card-minecraft">
                     <h3>Python в Minecraft</h3>
                     <p>Геймефікація освіти. Діти найкраще навчаються, граючи.</p>
                 </div>
             </div>
         </div>
-        <div class="skill-and-job-card">
-            <div class="skill-and-job-card-inner">
-                <div class="skill-and-job-card-front">
-                    <img src="pictures/desktop.png" alt="Avatar" style="height: 100%; width: 100%">
+        <div class="skill-card">
+            <div class="skill-card-inner">
+                <div class="skill-card-front">
+                    <img src="pictures/desktop.png" alt="Avatar" class="skill-card-picture">
                 </div>
-                <div class="skill-and-job-card-back skill-card-computer">
+                <div class="skill-card-back skill-card-computer">
                     <h3>Комп'ютерна грамотність</h3>
                     <p>Загальні навички користування комп'ютером та інтернетом.</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="text-container">
+
+    <div class="main-container">
+        <h2>Освіта та досвід роботи</h2>
+    </div>
+    <div class="main-container job-and-education-card" id="kpi-education-image">
+        <h3>НТУУ КПІ</h3>
+        <div class="job-and-education-overlay">
+            <p>В 2017 році вступив в КПІ, на <b>ФІОТ</b>.</p>
+            <p>Вчусь на спеціальності <b>Комп'ютерна Іженерія</b>.</p>
+        </div>
+    </div>
+    <div class="main-container job-and-education-card" id="fict-job-image">
+        <h3>Робота в університеті</h3>
+        <div class="job-and-education-overlay">
+            <p>З 2019 року працюю на <b>ФІОТі</b>.</p>
+            <p>Допомагаю в організації освітнього процесу, асистую у викладанні.</p>
+        </div>
+    </div>
+    <div class="main-container job-and-education-card" id="fja-job-image">
+        <h3>Академія Професій Майбутнього</h3>
+        <div class="job-and-education-overlay">
+            <p>З 2020 року викладаю для дітей від <b>6 до 12 років</b>.</p>
+            <p>Викладаю <b>LEGO-робототехніку</b>, <b>Python в Minecraft</b> та <b>IT-start</b> (базова комп'ютерна грамотність).</p>
+        </div>
+    </div>
+
+    <div class="main-container">
         <h2>Галерея</h2>
     </div>
     <div class="slider-container">
         <div class="mySlides">
-            <div class="numbertext">1 / 12</div>
-            <img src="./pictures/photo with kids/kid (1).JPEG" class="slide_image">
+            <div class="slide-number-text">1 / 12</div>
+            <img src="./pictures/photo with kids/kid (1).JPEG" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">2 / 12</div>
-            <img src="./pictures/photo with kids/kid (1).JPG" class="slide_image">
+            <div class="slide-number-text">2 / 12</div>
+            <img src="./pictures/photo with kids/kid (1).JPG" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">3 / 12</div>
-            <img src="./pictures/photo with kids/kid (10).JPG" class="slide_image">
+            <div class="slide-number-text">3 / 12</div>
+            <img src="./pictures/photo with kids/kid (10).JPG" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">4 / 12</div>
-            <img src="./pictures/photo with kids/kid (12).jpg" class="slide_image">
+            <div class="slide-number-text">4 / 12</div>
+            <img src="./pictures/photo with kids/kid (12).jpg" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">5 / 12</div>
-            <img src="./pictures/photo with kids/kid (2).jpg" class="slide_image">
+            <div class="slide-number-text">5 / 12</div>
+            <img src="./pictures/photo with kids/kid (2).jpg" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">6 / 12</div>
-            <img src="./pictures/photo with kids/kid (3).JPG.jpg" class="slide_image">
+            <div class="slide-number-text">6 / 12</div>
+            <img src="./pictures/photo with kids/kid (3).JPG.jpg" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">7 / 12</div>
-            <img src="./pictures/photo with kids/kid (4).jpg" class="slide_image">
+            <div class="slide-number-text">7 / 12</div>
+            <img src="./pictures/photo with kids/kid (4).jpg" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">8 / 12</div>
-            <img src="./pictures/photo with kids/kid (5).jpg" class="slide_image">
+            <div class="slide-number-text">8 / 12</div>
+            <img src="./pictures/photo with kids/kid (5).jpg" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">9 / 12</div>
-            <img src="./pictures/photo with kids/kid (6).jpg" class="slide_image">
+            <div class="slide-number-text">9 / 12</div>
+            <img src="./pictures/photo with kids/kid (6).jpg" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">10 / 12</div>
-            <img src="./pictures/photo with kids/kid (7).JPG" class="slide_image">
+            <div class="slide-number-text">10 / 12</div>
+            <img src="./pictures/photo with kids/kid (7).JPG" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">11 / 12</div>
-            <img src="./pictures/photo with kids/kid (8).JPG" class="slide_image">
+            <div class="slide-number-text">11 / 12</div>
+            <img src="./pictures/photo with kids/kid (8).JPG" class="slide-image">
         </div>
         <div class="mySlides">
-            <div class="numbertext">12 / 12</div>
-            <img src="./pictures/photo with kids/kid (9).JPG" class="slide_image">
+            <div class="slide-number-text">12 / 12</div>
+            <img src="./pictures/photo with kids/kid (9).JPG" class="slide-image">
         </div>
-
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
-
     </div>
 
-    <script src="slide_script.js"></script>
+    <div class="main-container">
+        <h3>Залишились питання? Задайте їх мені!</h3>
+        <div id="contact-container">
+            <a href="https://t.me/dictprosp">
+                <img alt="Telegram" class="contact-icon" src="pictures/telegram-brands.svg">
+            </a>
+            <a href="tel:+38-050-565-06-82">
+                <img alt="Telephone" class="contact-icon" src="pictures/phone-alt-solid.svg">
+            </a>
+            <a href="mailto:avil48job@gmail.com">
+                <img alt="Mail" class="contact-icon" src="pictures/envelope-regular.svg">
+            </a>
+        </div>
+        <a href="https://www.work.ua/ru/jobseeker/my/resumes/view/?id=6414092">
+            <h3>Оригінал резюме на Work.ua</h3>
+        </a>
+    </div>
+
+    <script src="utils.js"></script>
 </body>
 </html>

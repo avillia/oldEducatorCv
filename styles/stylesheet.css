@@ -1,193 +1,229 @@
-body {
+.body {
   font: 4vmin Verdana;
   color: #202020;
   display: inline-grid;
   justify-items: center;
   grid-row-gap: 3vmin;
-  background-image: url("../pictures/spikes.webp");
+  background: url(../pictures/spikes.webp) fixed
 }
 
-.text-container {
-  display: block;
-  background-color: white;
+h3 {
+  transition: .5s
+}
+
+.main-container,.my-avatar {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+  transition: .3s
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  background-color: #fff;
   width: 67%;
   border-radius: 40px;
-  }
+  overflow: hidden
+}
 
-.text-container:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+.main-container:hover,.my-avatar:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.2)
+}
 
 .my-avatar {
   max-height: 100%;
   max-width: 100%;
   border-radius: 50%;
-  border: 1vmin solid #f1f1f1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;}
+  border: 1vmin solid #f1f1f1
+}
 
-.my-avatar:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+#skill-cards-container {
+  width: 100%;
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1.5vmin;
+  grid-template-columns: repeat(auto-fill,25vmax)
+}
 
-.skill-and-job-card {
+.skill-card {
   background-color: transparent;
   width: 25vmax;
   height: 25vmax;
   border: 0 solid #f1f1f1;
-  perspective: 1000px;
-  /* Remove this if you don't want the 3D effect */ }
+  perspective: 1000px
+}
 
-/* This container is needed to position the front and back side */
-.skill-and-job-card-inner {
+.skill-card-inner {
   position: relative;
-  width: 100%;
+  transition: transform .8s;
+  transform-style: preserve-3d
+}
+
+.skill-card:hover .skill-card-inner {
+  transform: rotateY(180deg)
+}
+
+.skill-card-inner,.skill-card-picture {
   height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d; }
+  width: 100%
+}
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.skill-and-job-card:hover .skill-and-job-card-inner {
-  transform: rotateY(180deg); }
-
-/* Position the front and back side */
-.skill-and-job-card-front, .skill-and-job-card-back {
+.skill-card-back,.skill-card-front {
   position: absolute;
   text-align: center;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
-  /* Safari */
-  backface-visibility: hidden; }
+  backface-visibility: hidden
+}
 
-/* Style the front side (fallback if image is missing) */
-.skill-and-job-card-front {
+.skill-card-front {
   background-color: #bbb;
-  color: black; }
+  color: #000
+}
 
-/* Style the back side */
-.skill-and-job-card-back {
-  transform: rotateY(180deg);
+.skill-card-back {
+  transform: rotateY(180deg)
 }
 
 .skill-card-python {
-  background-color: #FFD43B;
-  color: #202020;
+  background-color: #ffd43b;
+  color: #202020
 }
 
 .skill-card-lego {
-  background-color: white;
-  color: #202020;
+  background-color: #fff;
+  color: #202020
 }
 
 .skill-card-web {
-  background-color: #7C6EAB;
-  color: white;
+  background-color: #7c6eab;
+  color: #fff
 }
 
 .skill-card-java {
-  background-color: #5382A1;
-  color: white;
+  background-color: #5382a1;
+  color: #fff
 }
 
 .skill-card-minecraft {
-  background-color: #77AB3D;
-  color: white;
+  background-color: #77ab3d;
+  color: #fff
 }
 
 .skill-card-computer {
-  background-color: #1A91A1;
-  color: white;
+  background-color: #1a91a1;
+  color: #fff
 }
 
-.cards-container {
-  width: 100%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, 25vmax);
-  grid-gap: 1.5vmin;
-}
-
-#toTopButton {
-  display: none;
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  z-index: 99;
-  border: solid #202020;
-  border-width: 0 5px 5px 0;
-  background-color: #F98314;
-  cursor: pointer;
-  padding: 10px;
-  transform: rotate(-135deg);
-  outline: solid #F98314 3px; }
-
-
-/* Position the image container (needed to position the left and right arrows) */
-.slider-container {
+.job-and-education-card {
   position: relative;
+  color: #fff;
+  max-width: 60vmax;
+  height: 33vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center
 }
 
-/* Hide the images by default */
+.job-and-education-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 33vh;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,.5)
+}
+
+.job-and-education-card:hover .job-and-education-overlay {
+  opacity: 1
+}
+
+.job-and-education-card:hover h3 {
+  opacity: 0
+}
+
+#kpi-education-image {
+  background-image: url(../pictures/NTUU_KPI.jpg)
+}
+
+#fict-job-image {
+  background-image: url(../pictures/FICT.png)
+}
+
+#fja-job-image {
+  background-image: url(../pictures/FJA.jpg);
+  background-position: top
+}
+
+.slider-container {
+  position: relative
+}
+
 .mySlides {
-  display: none;
+  display: none
 }
 
-.slide_image {
-  width: 80vw;
+.slide-image {
+  max-width: 80vw;
+  max-height: 80vh
 }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
+.cursor,.next,.prev {
+  cursor: pointer
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
+.next,.prev {
   position: absolute;
   top: 40%;
   width: auto;
   padding: 2vh;
   margin-top: middle;
-  color: white;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 700;
   font-size: 3vh;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  -webkit-user-select: none;
+  -webkit-user-select: none
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.next:hover,.prev:hover {
+  background-color: rgba(0,0,0,.8)
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  background-color: rgba(0, 0, 0, 0.3);
+.slide-number-text {
+  background-color: rgba(0,0,0,.3);
   border-radius: 3px;
   color: #f2f2f2;
   font-size: 2.5vh;
   padding: 8px 12px;
   position: absolute;
-  top: 0;
+  top: 0
 }
 
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
+.contact-icon {
+  width: 20vmin;
+  height: 20vmin
+}
+
+#contact-container {
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill,20vmax)
 }
